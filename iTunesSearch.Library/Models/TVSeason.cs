@@ -14,22 +14,22 @@ namespace iTunesSearch.Library.Models
         public long SeasonId { get; set; }
 
         [DataMember(Name = "artistName")]
-        public string ShowName { get; set; }
+        public string? ShowName { get; set; }
 
         [DataMember(Name = "collectionName")]
-        public string SeasonName { get; set; }
+        public string? SeasonName { get; set; }
 
         [DataMember(Name = "collectionCensoredName")]
-        public string SeasonCensoredName { get; set; }
+        public string? SeasonCensoredName { get; set; }
 
         [DataMember(Name = "artistViewUrl")]
-        public string ShowViewUrl { get; set; }
+        public string? ShowViewUrl { get; set; }
 
         [DataMember(Name = "collectionViewUrl")]
-        public string SeasonViewUrl { get; set; }
+        public string? SeasonViewUrl { get; set; }
 
         [DataMember(Name = "artworkUrl100")]
-        public string ArtworkUrl { get; set; }
+        public string? ArtworkUrl { get; set; }
 
         [DataMember(Name = "collectionPrice")]
         public decimal SeasonPrice { get; set; }
@@ -38,28 +38,28 @@ namespace iTunesSearch.Library.Models
         public decimal SeasonPriceHD { get; set; }
 
         [DataMember(Name = "releaseDate")]
-        public string ReleaseDate { get; set; }
+        public string? ReleaseDate { get; set; }
 
         [DataMember(Name = "collectionExplicitness")]
-        public string SeasonExplicitness { get; set; }
+        public string? SeasonExplicitness { get; set; }
 
         [DataMember(Name = "trackCount")]
         public int SeasonEpisodeCount { get; set; }
 
         [DataMember(Name = "country")]
-        public string Country { get; set; }
+        public string? Country { get; set; }
 
         [DataMember(Name = "primaryGenreName")]
-        public string Genre { get; set; }
+        public string? Genre { get; set; }
 
         [DataMember(Name = "contentAdvisoryRating")]
-        public string Rating { get; set; }
+        public string? Rating { get; set; }
 
         [DataMember(Name = "copyright")]
-        public string Copyright { get; set; }
+        public string? Copyright { get; set; }
 
         [DataMember(Name = "longDescription")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// The parsed season number, based on the season name

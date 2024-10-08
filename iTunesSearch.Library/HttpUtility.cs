@@ -31,14 +31,14 @@ namespace iTunesSearch.Library
         {
         }
 
-        public HttpValue(string key, string value)
+        public HttpValue(string? key, string? value)
         {
             this.Key = key;
             this.Value = value;
         }
 
-        public string Key { get; set; }
-        public string Value { get; set; }
+        public string? Key { get; set; }
+        public string? Value { get; set; }
     }
 
     public class HttpValueCollection : Collection<HttpValue>
@@ -66,7 +66,7 @@ namespace iTunesSearch.Library
 
         #region Parameters
 
-        public string this[string key]
+        public string? this[string key]
         {
             get { return this.First(x => string.Equals(x.Key, key, StringComparison.OrdinalIgnoreCase)).Value; }
             set { this.First(x => string.Equals(x.Key, key, StringComparison.OrdinalIgnoreCase)).Value = value; }
@@ -76,7 +76,7 @@ namespace iTunesSearch.Library
 
         #region Public Methods
 
-        public void Add(string key, string value)
+        public void Add(string? key, string? value)
         {
             this.Add(new HttpValue(key, value));
         }
@@ -86,7 +86,7 @@ namespace iTunesSearch.Library
             return this.Any(x => string.Equals(x.Key, key, StringComparison.OrdinalIgnoreCase));
         }
 
-        public string[] GetValues(string key)
+        public string?[] GetValues(string key)
         {
             return this.Where(x => string.Equals(x.Key, key, StringComparison.OrdinalIgnoreCase)).Select(x => x.Value).ToArray();
         }
@@ -124,11 +124,11 @@ namespace iTunesSearch.Library
 
             foreach (HttpValue item in this)
             {
-                string key = item.Key;
+                string? key = item.Key;
 
                 if ((excludeKeys == null) || !excludeKeys.Contains(key))
                 {
-                    string value = item.Value;
+                    string? value = item.Value;
 
                     if (urlencoded)
                     {
@@ -187,8 +187,8 @@ namespace iTunesSearch.Library
                     }
                     i++;
                 }
-                string str = null;
-                string str2 = null;
+                string? str = null;
+                string? str2 = null;
                 if (num4 >= 0)
                 {
                     str = query.Substring(startIndex, num4 - startIndex);

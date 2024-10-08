@@ -34,7 +34,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<PodcastListResult> GetPodcasts(string podcast, int resultLimit = 100, string countryCode = "us")
+        public async Task<PodcastListResult> GetPodcasts(string? podcast, int resultLimit = 100, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -85,7 +85,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<TVEpisodeListResult> GetTVEpisodesForShow(string showName, int resultLimit = 100, string countryCode = "us")
+        public async Task<TVEpisodeListResult> GetTVEpisodesForShow(string? showName, int resultLimit = 100, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -114,7 +114,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<TVSeasonListResult> GetTVSeasonsForShow(string showName, int resultLimit = 10, string countryCode = "us")
+        public async Task<TVSeasonListResult> GetTVSeasonsForShow(string? showName, int resultLimit = 10, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -208,7 +208,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<AlbumResult> GetAlbumsByArtistIdAsync(long artistId, int resultLimit = 100, string countryCode = "us")
+        public async Task<AlbumResult> GetAlbumsByArtistIdAsync(long artistId, int resultLimit = 100, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -234,7 +234,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<AlbumResult> GetAlbumsByAMGArtistIdAsync(long amgArtistId, int resultLimit = 100, string countryCode = "us")
+        public async Task<AlbumResult> GetAlbumsByAMGArtistIdAsync(long amgArtistId, int resultLimit = 100, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -260,7 +260,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<SongArtistResult> GetSongArtistsAsync(string artist, int resultLimit = 100, string countryCode = "us")
+        public async Task<SongArtistResult> GetSongArtistsAsync(string? artist, int resultLimit = 100, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -288,7 +288,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<SongResult> GetSongsAsync(string song, int resultLimit = 100, string attribute = null, string countryCode = "us")
+        public async Task<SongResult> GetSongsAsync(string? song, int resultLimit = 100, string? attribute = null, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -319,7 +319,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<AlbumResult> GetAlbumsAsync(string album, int resultLimit = 100, string attribute = null, string countryCode = "us")
+        public async Task<AlbumResult> GetAlbumsAsync(string? album, int resultLimit = 100, string? attribute = null, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 
@@ -350,7 +350,7 @@ namespace iTunesSearch.Library
         /// <param name="countryCode">The two-letter country ISO code for the store you want to search.
         /// See http://en.wikipedia.org/wiki/%20ISO_3166-1_alpha-2 for a list of ISO country codes</param>
         /// <returns></returns>
-        public async Task<AlbumResult> GetAlbumsFromSongAsync(string song, int resultLimit = 100, string attribute = null, string countryCode = "us")
+        public async Task<AlbumResult> GetAlbumsFromSongAsync(string? song, int resultLimit = 100, string? attribute = null, string? countryCode = "us")
         {
             var nvc = HttpUtility.ParseQueryString(string.Empty);
 

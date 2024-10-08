@@ -17,34 +17,34 @@ namespace iTunesSearch.Library.Models
         public long EpisodeId { get; set; }
 
         [DataMember(Name = "artistName")]
-        public string ShowName { get; set; }
+        public string? ShowName { get; set; }
 
         [DataMember(Name = "collectionName")]
-        public string SeasonName { get; set; }
+        public string? SeasonName { get; set; }
 
         [DataMember(Name="trackName")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [DataMember(Name = "collectionCensoredName")]
-        public string SeasonCensoredName { get; set; }
+        public string? SeasonCensoredName { get; set; }
 
         [DataMember(Name = "trackCensoredName")]
-        public string CensoredName { get; set; }
+        public string? CensoredName { get; set; }
 
         [DataMember(Name = "artistViewUrl")]
-        public string ShowViewUrl { get; set; }
+        public string? ShowViewUrl { get; set; }
 
         [DataMember(Name = "collectionViewUrl")]
-        public string SeasonViewUrl { get; set; }
+        public string? SeasonViewUrl { get; set; }
 
         [DataMember(Name = "trackViewUrl")]
-        public string ViewUrl { get; set; }
+        public string? ViewUrl { get; set; }
 
         [DataMember(Name = "previewUrl")]
-        public string PreviewUrl { get; set; }
+        public string? PreviewUrl { get; set; }
 
         [DataMember(Name = "artworkUrl100")]
-        public string ArtworkUrl { get; set; }
+        public string? ArtworkUrl { get; set; }
 
         [DataMember(Name = "collectionPrice")]
         public decimal SeasonPrice { get; set; }
@@ -59,13 +59,13 @@ namespace iTunesSearch.Library.Models
         public decimal PriceHD { get; set; }
 
         [DataMember(Name = "releaseDate")]
-        public string ReleaseDate { get; set; }
+        public string? ReleaseDate { get; set; }
 
         [DataMember(Name = "collectionExplicitness")]
-        public string SeasonExplicitness { get; set; }
+        public string? SeasonExplicitness { get; set; }
 
         [DataMember(Name = "trackExplicitness")]
-        public string Explicitness { get; set; }
+        public string? Explicitness { get; set; }
 
         [DataMember(Name = "trackCount")]
         public int SeasonEpisodeCount { get; set; }
@@ -77,19 +77,19 @@ namespace iTunesSearch.Library.Models
         public long RuntimeInMilliseconds { get; set; }
 
         [DataMember(Name = "country")]
-        public string Country { get; set; }
+        public string? Country { get; set; }
 
         [DataMember(Name = "primaryGenreName")]
-        public string Genre { get; set; }
+        public string? Genre { get; set; }
 
         [DataMember(Name = "contentAdvisoryRating")]
-        public string Rating { get; set; }
+        public string? Rating { get; set; }
 
         [DataMember(Name = "shortDescription")]
-        public string DescriptionShort { get; set; }
+        public string? DescriptionShort { get; set; }
 
         [DataMember(Name = "longDescription")]
-        public string DescriptionLong { get; set; }
+        public string? DescriptionLong { get; set; }
 
         /// <summary>
         /// The parsed large artwork url, based on the regular artwork url
@@ -121,7 +121,7 @@ namespace iTunesSearch.Library.Models
                 //  See if we can parse the season number from the season name
                 try
                 {
-                    string newString = Regex.Replace(this.SeasonName, "[^.0-9]", "");
+                    string? newString = Regex.Replace(this.SeasonName, "[^.0-9]", "");
                     retval = Convert.ToInt32(newString);
                 }
                 catch(Exception)
